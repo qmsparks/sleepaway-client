@@ -2,14 +2,13 @@ import { useState } from 'react';
 
 import AuthModel from '../../config/models/AuthModel';
 
-const Register = props => {
+const Register = () => {
   const [displayName, setDisplayName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
   const handleSubmit = e => {
-    console.log('Submit! That! Form!');
     e.preventDefault();
 
     AuthModel.register({displayName, email, password}).then(response => {

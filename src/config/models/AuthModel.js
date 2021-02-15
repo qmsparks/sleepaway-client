@@ -2,7 +2,6 @@ const URL = 'http://localhost:3001/api/v1/auth';
 
 class AuthModel {
   static register = data => {
-    console.log(data);
     return fetch(`${URL}/register`, {
       method: "POST",
       headers: {
